@@ -1,0 +1,13 @@
+#
+# Input core configuration
+#
+config SERIO_WOLOUART
+	tristate "Wolong Uart Driver"
+	default y
+	help
+	  Say Y here,if you have any scalar device (mouse, keyboard, tablet,
+	  joystick, steering wheel ...) connected to your system and want
+	  it to be available to talk.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called input.
