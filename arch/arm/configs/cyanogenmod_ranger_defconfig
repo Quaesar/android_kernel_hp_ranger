@@ -1049,16 +1049,7 @@ CONFIG_CAIF=y
 CONFIG_CAIF_NETDEV=y
 # CONFIG_CAIF_USB is not set
 # CONFIG_CEPH_LIB is not set
-CONFIG_NFC=y
-# CONFIG_NFC_NCI is not set
-# CONFIG_NFC_LLCP is not set
-
-#
-# Near Field Communication (NFC) devices
-#
-CONFIG_BCM2079X_NFC=y
-CONFIG_PN544_NFC=y
-# CONFIG_NFC_PN533 is not set
+# CONFIG_NFC is not set
 
 #
 # Device Drivers
