@@ -460,7 +460,7 @@ static struct i2c_board_info palma_device[] = {
 static struct i2c_board_info tsum88_device[] = {
 	{
 		I2C_BOARD_INFO("tsumu88", 0x49),
-	},		
+	},
 };
 
 static struct regulator_consumer_supply fixed_reg_dvdd_lcd_1v8_supply[] = {
@@ -615,7 +615,7 @@ int __init macallan_palmas_regulator_init(void)
 
 	i2c_register_board_info(4, palma_device,
 			ARRAY_SIZE(palma_device));
-	
+
 		i2c_register_board_info(1, tsum88_device,
 			ARRAY_SIZE(tsum88_device));
 	return 0;
@@ -683,7 +683,7 @@ static struct tegra_cl_dvfs_cfg_param macallan_cl_dvfs_param = {
 #endif
 
 /* palmas: fixed 10mV steps from 600mV to 1400mV, with offset 0x10 */
-#define PMU_CPU_VDD_MAP_SIZE ((1400000 - 600000) / 10000 + 1)
+#define PMU_CPU_VDD_MAP_SIZE ((1520000 - 600000) / 10000 + 1)
 static struct voltage_reg_map pmu_cpu_vdd_map[PMU_CPU_VDD_MAP_SIZE];
 static inline void fill_reg_map(void)
 {
@@ -726,7 +726,7 @@ static int __init macallan_cl_dvfs_init(void)
 //b+
 static void  macallan_camera_power_on_for_mic(void)
 {
-static struct regulator *CAM_LDO1_EN_3v3_cam = NULL;	
+static struct regulator *CAM_LDO1_EN_3v3_cam = NULL;
         // vdd_cam_3v3
         if (CAM_LDO1_EN_3v3_cam == NULL) {
             CAM_LDO1_EN_3v3_cam = regulator_get(NULL, "vdd_cam_3v3");
